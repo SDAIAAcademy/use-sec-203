@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.1 · جدول المستويات لعشر حالات استخدام · الذكاء الاصطناعي في الخدمات الحكومية</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_1_tiering_table.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.1</span>
+<h1>جدول المستويات لعشر حالات استخدام</h1>
+<p>تبدأ من خريطة الخدمة التي رسمتها في العمل التحضيري، ثم تصنّف عشر حالات استخدام في هيئة كنف على أربعة مستويات للمخاطر، وتكتب لكل حالة عالية المخاطر الواجبات المترتبة عليها. تخرج بجدول التصنيف إلى مستويات.</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 1</span><span>الجلسة 1: أربعة استخدامات وأربعة مستويات للمخاطر</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>خريطة خدمتك من العمل التحضيري، وعليها نقاط القرار التي تمس حقًّا أو إعانة.</li>
+      <li>جدول المستويات لعشر حالات استخدام في هيئة كنف: هل تمس حقًّا أو إعانة، وهل مخرجها مشورة أم قرار آلي، ومستوى مخاطرها.</li>
+      <li>الواجبات المترتبة على كل حالة عالية المخاطر، بلغة سياسة الهيئة.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/prework_guide.txt" target="_blank"><b>prework_guide.txt</b><span>دليل العمل التحضيري: ارسم خريطة لخدمة واحدة من الطلب إلى القرار، في نحو ساعتين قبل الورشة.</span></a>
+    <a href="files/prework_service_map.csv" target="_blank"><b>prework_service_map.csv</b><span>خريطة خدمتك من العمل التحضيري. إن لم تكملها فابدأ من <code>files/start/service_map_example.csv</code> (خريطة طلب «مدد»).</span></a>
+    <a href="files/use_cases/" target="_blank"><b>use_cases/</b><span>عشر بطاقات من U01 إلى U10، وسياسة الهيئة <code>agency_ai_policy.txt</code>.</span></a>
+    <a href="files/use_cases/tiering_sheet.csv" target="_blank"><b>tiering_sheet.csv</b><span>جدول المستويات الفارغ الذي تملؤه.</span></a>
+    <a href="files/start/tiering_table_reference.csv" target="_blank"><b>start/tiering_table_reference.csv</b><span>المفتاح. لا تفتحه قبل أن تحفظ جدولك في الخطوة 4.</span></a>
+  </div>
+  <p class="small">برنامج جداول، ومساعد محادثة يُستعمل مدرّسًا لا مجيبًا: يسألك ولا يقرر عنك. البطاقات اصطناعية وعامة التصنيف، فلا مانع من لصقها في المساعد.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · نقاط القرار في خدمتك <span class="min">5 دقائق</span></h3>
+    <p>افتح خريطتك وعلّم كل خطوة قد يترتب عليها رفض أو إيقاف أو حجز أو استرداد أو إحالة للتحقيق. هذه هي الخطوات التي «تمس حقًّا أو إعانة»، ولو كان القرار الأخير فيها لموظف. ضع بجانب كل منها: هل فيها اليوم نظام آلي أو مقترح لنظام؟</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · صنّف البطاقات العشر <span class="min">14 دقيقة</span></h3>
+    <p>اقرأ سياسة الهيئة أولًا، ثم كل بطاقة. املأ لكل حالة في الجدول ثلاثة أعمدة بهذا الترتيب: يمس حقًّا أو إعانة؟ ثم مشورة أم قرار آلي؟ ثم المستوى. السؤال الأول يحسم أكثر الحالات.</p>
+    <div class="prompt" data-tool="مساعد محادثة، دور المدرّس">أنا أصنّف حالات استخدام للذكاء الاصطناعي في جهة حكومية على أربعة مستويات للمخاطر. هذه سياسة الجهة: <span class="ph">[الصق agency_ai_policy.txt]</span>
+وهذه بطاقة الحالة: <span class="ph">[الصق البطاقة]</span>
+لا تعطني المستوى. اسألني سؤالين أو ثلاثة يكشفان هل يمس المخرج حقًّا أو إعانة، ثم قل لي أي جملة في البطاقة كان يجب أن أقرأها بعناية.</div>
+  </div>
+
+  <div class="step">
+    <h3>3 · واجبات الحالات العالية <span class="min">8 دقائق</span></h3>
+    <p>لكل حالة صنّفتها «عالية» اكتب في العمود الأخير الواجبات من سياسة الهيئة، ثم علّم الواجب الغائب اليوم بحسب البطاقة: مراجع قبل النفاذ؟ مسار تظلم منشور؟</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · قارن ثم صحّح <span class="min">8 دقائق</span></h3>
+    <p>احفظ جدولك أولًا باسمك كما هو (أو سلّمه للمدرّب): هذه النسخة هي دليل ناتج التعلم الأول، ولا تغيّرها بعد ذلك. ثم قارن جدولك بجدول زميل، وناقشا كل صف اختلفتما فيه بجملة من البطاقة. بعدها افتح المفتاح وعدّ صفوفك الصحيحة في عمود المستوى، واكتب تصحيحاتك في عمود جديد لا فوق إجاباتك. ناتج التعلم الأول يتحقق بثمانية صفوف صحيحة من عشرة في النسخة المحفوظة.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ تمرين إضافي</h3>
+    <p>صنّف حالتين من جهتك بالطريقة نفسها، واسأل المساعد عن سؤال واحد فاتك أن تسأله عن كل منهما. لا تلصق في المساعد شيئًا مصنفًا «مقيدًا» أو أعلى.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي حالة تبدو عملًا مكتبيًّا وهي عالية المخاطر؟ وما الجملة في بطاقتها التي تحسم ذلك؟</li>
+    <li>الحالة U08 قرارها لموظف. لماذا تبقى عالية المخاطر؟</li>
+    <li>ما الفرق بين U04 وU10، مع أن كلتيهما لا تُقبل بتصميمها الحالي؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <ul>
+      <li>الحل في <code>labs/solutions/D1_1_tiering_table.md</code> والجدول المكتمل في <code>labs/solutions/tiering_sheet.csv</code>. يتحقق منه <code>uv run labs/solutions/check.py 1.1</code>.</li>
+      <li>المفتاح في <code>files/start/tiering_table_reference.csv</code> لأن المختبر 2.4 يبدأ منه، فهو في يد المشاركين من البداية. اجمع الجداول (أو اطلب حفظها بالاسم) قبل الخطوة 4، وقدّر الناتج الأول على تلك النسخة وحدها؛ ومن فتح المفتاح قبلها فجدوله لا يُحتسب دليلًا.</li>
+      <li>المفتاح: بسيطة أو منعدمة U06 وU07؛ محدودة U01 وU05 وU09؛ عالية U02 وU03 وU04 وU08؛ غير مقبولة U10.</li>
+      <li>الفخاخ: U02 تُحسب عملًا مكتبيًّا، وخطأ في خانة الدخل يغيّر استحقاق أسرة (المختبر 1.4 يقيس ذلك). U07 تُرفع إلى «محدودة» لأن فيها تنبؤًا، وهي لا تمس متصلًا. U08 تُخفض لأن «القرار للموظف». U04 تُصنَّف «غير مقبولة»: من علّل بغياب المراجع ومسار التظلم فجوابه مقبول في العدّ، والفرق أن U04 يُصلحها مراجع ومسار، أما U10 فتقييم اجتماعي لا يصلحه شيء.</li>
+      <li>المستويات الأربعة من مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا. الواجبات المكتوبة لكل مستوى في سياسة كنف من وضع الحالة الافتراضية، فقلها بوضوح.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><span></span><a href="D1_2_assistant_test_part1.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الخدمات الحكومية<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع c948079</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:06:27Z","version":"2027.1.0","commit":"c948079"},"course":{"id":"use-sec-203","code":"USE-SEC-203","title":"الذكاء الاصطناعي في الخدمات الحكومية","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-203/","repo":"SDAIAAcademy/use-sec-203","home":"../index.html"},"lab":{"id":"1.1","title":"جدول المستويات لعشر حالات استخدام","summary":"تبدأ من خريطة الخدمة التي رسمتها في العمل التحضيري، ثم تصنّف عشر حالات استخدام في هيئة كنف على أربعة مستويات للمخاطر، وتكتب لكل حالة عالية المخاطر الواجبات المترتبة عليها. تخرج بجدول التصنيف إلى مستويات.","minutes":35,"day":1,"unit":"اليوم 1","session":1,"deck":"../slides/day1.html#lab-1-1","prev":null,"next":"D1_2_assistant_test_part1.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

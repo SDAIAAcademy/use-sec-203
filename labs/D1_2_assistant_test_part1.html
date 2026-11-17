@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · اختبار «بشير»: الصحة والاستناد · الذكاء الاصطناعي في الخدمات الحكومية</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_assistant_test_part1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>اختبار «بشير»: الصحة والاستناد</h1>
+<p>الجزء الأول من اختبار مساعد مستند إلى المصادر على 40 استفسارًا ثنائي اللغة: تقيّم إجابات «بشير» المسجلة عن الاستفسارات 1 إلى 20 مقابل قواعد «مدد» المنشورة، وتصنّف نوع كل خطأ وتكتب البند الذي يحسمه.</p>
+<div class="meta"><span>40 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: الاستناد إلى المصادر الرسمية</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>ورقة اختبار للمساعد «بشير» فيها حكم على الاستفسارات 1 إلى 20: صحيحة أو ناقصة أو خاطئة، ونوع كل خطأ، والبند الذي يحسمه.</li>
+      <li>أول دليل على ما يجعل المساعد يخطئ: قاعدة ملغاة في مصادره، أو اختلاق، أو بتّ في حالة لا يحق له البت فيها.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/rules/madad_rules_v3.txt" target="_blank"><b>rules/madad_rules_v3.txt</b><span>قواعد «مدد» النافذة، أربعة عشر بندًا، ونسختها الإنجليزية <code>madad_rules_v3_en.txt</code>.</span></a>
+    <a href="files/rules/madad_rules_v2_superseded.txt" target="_blank"><b>rules/madad_rules_v2_superseded.txt</b><span>الإصدار الملغى، في الأرشيف.</span></a>
+    <a href="files/assistant/test_sheet.csv" target="_blank"><b>assistant/test_sheet.csv</b><span>أربعون استفسارًا بالفصحى واللهجة والإنجليزية، مع الإجابة الرسمية وإجابة «بشير» المسجلة.</span></a>
+    <a href="files/assistant/acceptance_criteria.txt" target="_blank"><b>assistant/acceptance_criteria.txt</b><span>كيف تُحكم الصحة، وأنواع الخطأ، ومعايير القبول.</span></a>
+  </div>
+  <p class="small">برنامج جداول. وللخطوة 4 مساعد يعمل على مستندات مقدَّمة: Open WebUI مع نموذج مفتوح الأوزان، أو مساعد حكومي مصرح باستخدامه، أو أي مساعد محادثة يقبل رفع ملف. القواعد اصطناعية وعامة التصنيف.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · القواعد وورقة الاختبار <span class="min">6 دقائق</span></h3>
+    <p>اقرأ القواعد النافذة كلها مرة واحدة، ثم معايير القبول. افتح ورقة الاختبار: الأعمدة من «الرقم» إلى «هل صعّد بشير؟» معبأة، والأعمدة الثلاثة الأخيرة لك. عمود «يجب التصعيد؟» معبأ للعشرين الأولى.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · الصحة مقابل الإجابة الرسمية <span class="min">16 دقيقة</span></h3>
+    <p>لكل استفسار من 1 إلى 20 اقرأ إجابة «بشير» مقابل الإجابة الرسمية والبند، واكتب في عمود «الصحة»: صحيحة، أو ناقصة، أو خاطئة. احكم بما يفعله السائل بعد الإجابة، لا بجمال العبارة. إن رأيت رقمًا لا تعرفه فابحث عنه في القواعد قبل أن تحكم.</p>
+    <div class="callout note"><b>انتبه للاستفسار Q07:</b> السائل يطلب حكمًا في طلبه هو. ما الذي يحق لـ«بشير» أن يقوله في حالة فردية؟ البند 14 يجيب.</div>
+  </div>
+
+  <div class="step">
+    <h3>3 · نوع الخطأ والبند الحاسم <span class="min">10 دقائق</span></h3>
+    <p>لكل إجابة غير صحيحة اكتب نوع الخطأ: واقعة خاطئة، أو قاعدة ملغاة، أو اختلاق، أو نقص، أو سوء فهم، أو بتّ في حالة فردية، أو تصعيد زائد. وإن كان الرقم الخاطئ موجودًا في الإصدار الملغى فالخطأ «قاعدة ملغاة»: افتح الملف وتحقق. ثم املأ عمود «التصعيد»: سليم، أو فائت، أو زائد.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · ثلاثة استفسارات على مساعد حي <span class="min">8 دقائق</span></h3>
+    <p>ارفع القواعد النافذة وحدها إلى المساعد، واطرح عليه Q03 وQ07 وQ10 كما هي في الورقة. سجّل لكل منها: هل أجاب من البند الصحيح؟ وهل امتنع عن البت في Q07؟</p>
+    <div class="prompt" data-tool="مساعد يعمل على مستندات مقدَّمة">أنت مساعد هيئة كنف لاستفسارات برنامج «مدد». أجب من القواعد المرفقة وحدها، واذكر رقم البند في كل إجابة. إن لم تجد الجواب في القواعد فقل ذلك ولا تخمّن. لا تبت في أي حالة فردية ولا في شكوى أو تظلم أو بلاغ: أحل السائل إلى موظف.
+الاستفسار: <span class="ph">[الصق نص الاستفسار]</span></div>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ تمرين إضافي</h3>
+    <p>اكتب خمسة استفسارات جديدة تختبر بندًا لم تختبره الورقة، مع الإجابة الرسمية لكل منها والبند الذي يحسمها. أيها يجب تصعيده؟</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>كم إجابة صحيحة في العشرين الأولى؟</li>
+    <li>ما الذي يجمع Q03 وQ13؟ وماذا يقول ذلك عن مصادر «بشير»، لا عن النموذج؟</li>
+    <li>لماذا Q07 خاطئة حتى لو كان الرفض صحيحًا؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <ul>
+      <li>الحل في <code>labs/solutions/D1_2_assistant_test_part1.md</code> والورقة المكتملة في <code>labs/solutions/test_sheet_scored.csv</code>. يتحقق منها <code>uv run labs/solutions/check.py 1.2</code>، ويثبت أن الرقم الخاطئ في Q03 (30) وQ13 (1,100) موجود في البند نفسه من الإصدار الملغى وليس في النافذ.</li>
+      <li>الصحيحة 13 من 20. غير الصحيحة: Q03 وQ13 قاعدة ملغاة؛ Q04 نقص (أسقط إثبات الدخل)؛ Q07 بتّ في حالة فردية، والحساب خاطئ أيضًا (4,000 على أربعة أفراد أقل من الحد)؛ Q10 اختلاق (بدل إيجار)؛ Q19 واقعة خاطئة (25% بدل 10%)؛ Q20 تصعيد زائد.</li>
+      <li>الخطوة 4 لم تُجرَّب على مساعد حي عند بناء المقرر: لا مفتاح لها. يُحكم على إجابات المساعد الحي بالقواعد لا بإجابات «بشير». جرّبها بنفسك قبل الدفعة على الأداة المتاحة في القاعة.</li>
+      <li>خطأ شائع: الحكم على Q20 بأنها «صحيحة» لأن التصعيد آمن. التصعيد الزائد يكلّف مركز الاتصال ويؤخر السائل، والجواب في البند 8.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_1_tiering_table.html" rel="prev">→ المختبر السابق</a><a href="D1_3_assistant_test_part2.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الخدمات الحكومية<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع c948079</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:06:27Z","version":"2027.1.0","commit":"c948079"},"course":{"id":"use-sec-203","code":"USE-SEC-203","title":"الذكاء الاصطناعي في الخدمات الحكومية","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-203/","repo":"SDAIAAcademy/use-sec-203","home":"../index.html"},"lab":{"id":"1.2","title":"اختبار «بشير»: الصحة والاستناد","summary":"الجزء الأول من اختبار مساعد مستند إلى المصادر على 40 استفسارًا ثنائي اللغة: تقيّم إجابات «بشير» المسجلة عن الاستفسارات 1 إلى 20 مقابل قواعد «مدد» المنشورة، وتصنّف نوع كل خطأ وتكتب البند الذي يحسمه.","minutes":40,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_tiering_table.html","next":"D1_3_assistant_test_part2.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

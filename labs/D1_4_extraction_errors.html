@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.4 · أخطاء الاستخراج في 30 استمارة · الذكاء الاصطناعي في الخدمات الحكومية</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_4_extraction_errors.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.4</span>
+<h1>أخطاء الاستخراج في 30 استمارة</h1>
+<p>تقييم أخطاء الاستخراج في 30 استمارة اصطناعية: تطابق مخرجات الأداة «ناسخ» مع ما كُتب في الاستمارات، وتصنّف كل اختلاف شكليًّا أو مؤثرًا، وتحسب دقة الحقول ونسبة الاستمارات المتأثرة وعدد قرارات الأهلية التي تنقلب.</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 1</span><span>الجلسة 4: أتمتة المستندات وقياس أخطاء الاستخراج</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.4">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>ورقة مقارنة لثلاثين استمارة في ثمانية حقول، وفيها كل اختلاف بين الاستمارة وما استخرجته الأداة «ناسخ»، مصنفًا شكليًّا أو مؤثرًا.</li>
+      <li>أربعة أرقام: دقة الحقول بطريقتين، ونسبة الاستمارات المتأثرة، وعدد قرارات الأهلية التي تنقلب.</li>
+      <li>قاعدة تحقق بشري مكتوبة تقترحها لرئيس وحدة معالجة المستندات.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/extraction/forms/" target="_blank"><b>extraction/forms/</b><span>ثلاثون استمارة من F01 إلى F30، منها اثنتا عشرة بخط اليد. نص كل استمارة كما كتبه مقدم الطلب.</span></a>
+    <a href="files/extraction/nasikh_output.csv" target="_blank"><b>extraction/nasikh_output.csv</b><span>ما استخرجه «ناسخ» من الاستمارات.</span></a>
+    <a href="files/extraction/compare_sheet.csv" target="_blank"><b>extraction/compare_sheet.csv</b><span>ورقة المقارنة: صف لكل حقل في كل استمارة (240 صفًّا)، وعمودان فارغان لك.</span></a>
+    <a href="files/extraction/summary_template.csv" target="_blank"><b>extraction/summary_template.csv</b><span>قالب الأرقام.</span></a>
+  </div>
+  <p class="small">برنامج جداول. قواعد «مدد» في <code>files/rules/madad_rules_v3.txt</code>: البند 3 حد الدخل، والبند 4 المبلغ.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · ثلاث استمارات باليد <span class="min">6 دقائق</span></h3>
+    <p>افتح F03 وF07 وF22، وقارن كل حقل بصفّه في مخرجات «ناسخ». قبل أن تعتمد على الجدول، اعرف بعينك كيف يبدو الخطأ وكيف يبدو الاختلاف الذي لا يغيّر شيئًا.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · علّم الخلايا المختلفة <span class="min">8 دقائق</span></h3>
+    <p>لا تفتح ورقة المقارنة بالنقر المزدوج: استوردها والأعمدة كلها نص. في Excel: البيانات ← من نص/CSV ← تحويل البيانات، ثم حدّد الأعمدة كلها واجعل نوعها «نص». في Google Sheets: ملف ← استيراد، وأزل علامة «تحويل النص إلى أرقام وتواريخ وصيغ». بغير ذلك يحوّل البرنامج «6,300» إلى الرقم 6300، فيختفي اختلاف شكلي ويصير العدّ 20 لا 22. ثم أضف عمودًا بالصيغة <code>=EXACT(D2,E2)</code>: الناتج FALSE يعني أن الخليتين مختلفتان. اكتب «نعم» في عمود «مختلف؟» لكل FALSE، ورشّح عليها.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · شكلي أم مؤثر <span class="min">10 دقائق</span></h3>
+    <p>لكل خلية مختلفة اسأل: هل القيمة هي نفسها؟ همزة أو تاء مربوطة أو مسافة أو فاصلة آلاف اختلاف «شكلي». رقم آخر أو خانة مبدّلة أو سنة مختلفة اختلاف «مؤثر»، ولو كان خانة واحدة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · الأرقام الأربعة <span class="min">7 دقائق</span></h3>
+    <p>املأ قالب الأرقام: الخلايا المختلفة، ومنها الشكلية والمؤثرة، ودقة الحقول إذا عُدّ كل اختلاف ثم إذا عُدّ المؤثر وحده، والاستمارات التي فيها خطأ مؤثر. ثم لكل استمارة فيها خطأ في الدخل أو عدد الأفراد: احسب الأهلية بالقيمة الصحيحة وبالقيمة المستخرجة. هل انقلب القرار؟ هل تغيّر المبلغ؟</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · قاعدة التحقق البشري <span class="min">4 دقائق</span></h3>
+    <p>اكتب في سطرين: أي الحقول يراجعها موظف، وفي أي الاستمارات، قبل أن تدخل نظام الأهلية. استند إلى أرقامك لا إلى انطباعك.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ تمرين إضافي</h3>
+    <p>قارن أخطاء الاستمارات المكتوبة باليد بأخطاء المطبوعة، واكتب ما يغيّره ذلك في قاعدتك. ومن أراد أداة حقيقية: صوّر استمارة واحدة مطبوعة وشغّل عليها أداة لاستخراج النص (Tesseract أو Docling)، وقارن.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>ما دقة الحقول بالطريقتين؟ وأي الرقمين يكتبه المورّد في عرضه عادة؟</li>
+    <li>كم قرار أهلية ينقلب؟ وفي أي اتجاه؟</li>
+    <li>لماذا لا ينقلب القرار في F14 مع أن الدخل المستخرج خاطئ؟ ومتى يظهر هذا الخطأ؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <ul>
+      <li>الحل في <code>labs/solutions/D1_4_extraction_errors.md</code>، والورقة المكتملة <code>labs/solutions/compare_sheet.csv</code>، والأرقام <code>labs/solutions/extraction_summary.csv</code>. يتحقق منها <code>uv run labs/solutions/check.py 1.4</code>، ويحسب الأهلية من البندين 3 و4 كما في ملف القواعد.</li>
+      <li>الخلايا 240، والمختلفة 22: 9 شكلية و13 مؤثرة. دقة الحقول 90.8% إذا عُدّ كل اختلاف، و94.6% إذا عُدّ المؤثر وحده. الاستمارات المتأثرة 13 من 30 (43%)، منها 10 من 12 بخط اليد و3 من 18 مطبوعة.</li>
+      <li>تنقلب أربعة قرارات: F03 وF19 قُبلتا خطأً، وF05 وF08 رُفضتا خطأً. ويتغير المبلغ لأسرتين: F11 من 900 إلى 2,150 ريالًا، وF22 من 1,650 إلى 1,400.</li>
+      <li>من فتح الملف مباشرة دون استيراد الأعمدة نصًّا قد يجد 20 خلية مختلفة و7 شكلية: البرنامج يحوّل «6,300» في F10 و«6,900» في F20 إلى رقمين يساويان 6300 و6900، فتطابق الخليتان. لا تصحّح ذلك فورًا: اسأل لماذا اختفى الاختلاف، فهو درس في أن أداة القياس نفسها تغيّر ما تقيسه. الحل المرجعي يقارن النصوص كما هي (22 و9).</li>
+      <li>الدرس: 94.6% دقة حقول تعني 43% من الاستمارات فيها خطأ مؤثر. الحقل ليس وحدة القرار، الاستمارة هي الوحدة.</li>
+      <li>الاستمارات ملفات نصية تمثل ما في الورق، و«ناسخ» مخرجات مكتوبة بأخطاء مزروعة: لم تُشغَّل أداة استخراج حقيقية عند بناء المقرر.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_3_assistant_test_part2.html" rel="prev">→ المختبر السابق</a><a href="D2_1_fraud_threshold.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الخدمات الحكومية<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع c948079</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:06:27Z","version":"2027.1.0","commit":"c948079"},"course":{"id":"use-sec-203","code":"USE-SEC-203","title":"الذكاء الاصطناعي في الخدمات الحكومية","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-203/","repo":"SDAIAAcademy/use-sec-203","home":"../index.html"},"lab":{"id":"1.4","title":"أخطاء الاستخراج في 30 استمارة","summary":"تقييم أخطاء الاستخراج في 30 استمارة اصطناعية: تطابق مخرجات الأداة «ناسخ» مع ما كُتب في الاستمارات، وتصنّف كل اختلاف شكليًّا أو مؤثرًا، وتحسب دقة الحقول ونسبة الاستمارات المتأثرة وعدد قرارات الأهلية التي تنقلب.","minutes":35,"day":1,"unit":"اليوم 1","session":4,"deck":"../slides/day1.html#lab-1-4","prev":"D1_3_assistant_test_part2.html","next":"D2_1_fraud_threshold.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

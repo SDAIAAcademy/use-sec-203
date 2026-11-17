@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · العبء بحسب الفئة ومذكرة العتبة · الذكاء الاصطناعي في الخدمات الحكومية</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_burden_and_memo.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>العبء بحسب الفئة ومذكرة العتبة</h1>
+<p>الجزء الثاني من تحديد عتبة للاحتيال وإحصاء الأسر المصنفة خطأً: تبدأ من جدول العتبات الجاهز، وتعدّ الأسر المصنفة خطأً عند عتبتك بحسب نوع الدخل، وتحسب المعدل لكل فئة، وتكتب مذكرة العتبة.</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: من يتحمل العبء، وإخفاقات القرارات الآلية في الإعانات</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>عدد الأسر المصنفة خطأً عند عتبتك بحسب نوع الدخل، ومعدلها من السليم في كل فئة.</li>
+      <li>مذكرة عتبة من ست فقرات: العتبة، والأعداد، ومن يتحمل الخطأ، وما يقع على الأسرة، والضمانات، وما لا تقوله الأرقام.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/start/threshold_table.csv" target="_blank"><b>start/threshold_table.csv</b><span>نقطة البداية: جدول العتبات مكتملًا. لا تحتاج إلى نتيجة المختبر 2.1.</span></a>
+    <a href="files/fraud/applications_10000.csv" target="_blank"><b>fraud/applications_10000.csv</b><span>الطلبات العشرة آلاف.</span></a>
+    <a href="files/fraud/subgroup_table_template.csv" target="_blank"><b>fraud/subgroup_table_template.csv</b><span>جدول الفئات الفارغ.</span></a>
+    <a href="files/fraud/memo_template.txt" target="_blank"><b>fraud/memo_template.txt</b><span>قالب مذكرة العتبة.</span></a>
+  </div>
+  <p class="small">برنامج جداول أو أداة تحليل دون برمجة. المساعد مدرّس: يراجع صياغة المذكرة ولا يكتبها عنك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · ثبّت عتبتك <span class="min">5 دقائق</span></h3>
+    <p>افتح جدول العتبات الجاهز واختر عتبة: عتبتك من المختبر 2.1، أو 70 إن لم تختر. اكتبها في أعلى جدول الفئات.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · العدّ بحسب نوع الدخل <span class="min">10 دقائق</span></h3>
+    <p>لكل فئة (ثابت، موسمي): عدد الطلبات، والمخالفات المؤكدة، والسليم، والأسر السليمة المؤشَّر عليها. اكتب في J1 «مخالفة مؤكدة»، وفي J2 «سليم»، وفي J3 عتبتك، وفي K1 اسم الفئة كما في عمود نوع الدخل («موسمي» ثم «ثابت»).</p>
+    <pre class="code" data-file="COUNTIFS"><code>=COUNTIFS(B:B,K1)
+=COUNTIFS(B:B,K1,G:G,J1)
+=COUNTIFS(B:B,K1,G:G,J2)
+=COUNTIFS(B:B,K1,G:G,J2,F:F,"&gt;="&amp;J3)</code></pre>
+  </div>
+
+  <div class="step">
+    <h3>3 · المعدل وما يقوله <span class="min">6 دقائق</span></h3>
+    <p>معدل التصنيف الخاطئ في الفئة = الأسر السليمة المؤشَّر عليها ÷ السليم في الفئة. احسبه للفئتين، ثم قارن نسبة المخالفات المؤكدة في الفئتين. إن تساوت المخالفات واختلف المعدل، فمن أين يأتي الفرق؟</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · مذكرة العتبة <span class="min">10 دقائق</span></h3>
+    <p>املأ قالب المذكرة بأرقامك. في الفقرة 4 اكتب ما يقع اليوم على الأسرة المؤشَّر عليها (من ملف الإجراءات) وما تقترح أن يتغير. وفي الفقرة 6 اكتب ما لا تقوله هذه الأرقام.</p>
+    <div class="prompt" data-tool="مساعد محادثة، دور المدرّس">هذه مذكرة كتبتها لصاحبة قرار عتبة نموذج لتقدير مخاطر الاحتيال: <span class="ph">[الصق المذكرة]</span>
+لا تعد كتابتها. قل لي: هل تعرف صاحبة القرار منها كم أسرة سليمة يؤشَّر عليها ومن أي فئة؟ وأي جملة فيها نسبة بلا العدد الذي وراءها؟ وأي ادعاء لا تسنده الأرقام المكتوبة؟</div>
+  </div>
+
+  <div class="step">
+    <h3>5 · بادل المذكرة <span class="min">4 دقائق</span></h3>
+    <p>أعط مذكرتك لزميل يقرؤها في دقيقتين ويجيب: من يتضرر عند هذه العتبة، وكم؟ إن لم يعرف فالمذكرة لم تؤد عملها.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ تمرين إضافي</h3>
+    <p>أعد العدّ بحسب مكان السكن (مدينة، قرية نائية)، واكتب هل تتغير مذكرتك.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>عند 70: كم أسرة موسمية الدخل صُنفت خطأً، وكم أسرة ثابتة الدخل؟ وما المعدل في كل منهما؟</li>
+    <li>ما نسبة المخالفات المؤكدة في الفئتين؟ وماذا تستنتج منها عن مصدر الفرق؟</li>
+    <li>ما الضمانة التي تشترطها في مذكرتك قبل العمل بالعتبة؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <ul>
+      <li>الحل في <code>labs/solutions/D2_2_burden_and_memo.md</code>، والجدول في <code>labs/solutions/subgroup_table.csv</code>، والمذكرة المرجعية في <code>labs/solutions/threshold_memo_reference.txt</code>. يتحقق منها <code>uv run labs/solutions/check.py 2.2</code>.</li>
+      <li>عند 70: الموسمي 89 أسرة من 2,425 سليمة (3.67%)، والثابت 41 من 7,275 (0.56%). الموسميون ربع الطلبات ويتحملون 89 من 130 تصنيفًا خاطئًا. نسبة المخالفات 3% في الفئتين.</li>
+      <li>مصدر الفرق: نمط الإيداعات البنكية غير المنتظم خاصية بديلة عن الدخل الموسمي (مذكور في سجل «مدقِّق» المرجعي). الأسر لا تخالف أكثر.</li>
+      <li>المهمة الإضافية: بحسب مكان السكن الفرق صغير (1.27% و1.5% عند 70). ليس كل تقسيم يكشف فجوة: التقسيم يُختار بمعرفة الخدمة.</li>
+      <li>خطأ شائع: قسمة الأسر المصنفة خطأً على كل طلبات الفئة لا على السليم منها. الفرق صغير هنا لأن المخالفات 3%، لكنه خطأ في التعريف.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_1_fraud_threshold.html" rel="prev">→ المختبر السابق</a><a href="D2_3_transparency_record.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الخدمات الحكومية<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع c948079</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:06:27Z","version":"2027.1.0","commit":"c948079"},"course":{"id":"use-sec-203","code":"USE-SEC-203","title":"الذكاء الاصطناعي في الخدمات الحكومية","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-203/","repo":"SDAIAAcademy/use-sec-203","home":"../index.html"},"lab":{"id":"2.2","title":"العبء بحسب الفئة ومذكرة العتبة","summary":"الجزء الثاني من تحديد عتبة للاحتيال وإحصاء الأسر المصنفة خطأً: تبدأ من جدول العتبات الجاهز، وتعدّ الأسر المصنفة خطأً عند عتبتك بحسب نوع الدخل، وتحسب المعدل لكل فئة، وتكتب مذكرة العتبة.","minutes":35,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_fraud_threshold.html","next":"D2_3_transparency_record.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

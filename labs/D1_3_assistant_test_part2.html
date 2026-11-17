@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.3 · اختبار «بشير»: اللهجة والتصعيد وورقة الاختبار · الذكاء الاصطناعي في الخدمات الحكومية</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_3_assistant_test_part2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.3</span>
+<h1>اختبار «بشير»: اللهجة والتصعيد وورقة الاختبار</h1>
+<p>الجزء الثاني من اختبار مساعد مستند إلى المصادر على 40 استفسارًا ثنائي اللغة: تبدأ من ورقة فيها تقييم العشرين الأولى، وتقيّم الاستفسارات 21 إلى 40 في الصحة وقرار التصعيد، ثم تحسب النسب بحسب اللغة وتكتب قرار القبول. تخرج بورقة الاختبار كاملة.</p>
+<div class="meta"><span>40 دقيقة</span><span>اليوم 1</span><span>الجلسة 3: العربية واللهجة والإنجليزية، والتصعيد إلى موظف</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>ورقة اختبار «بشير» كاملة للاستفسارات الأربعين: الصحة ونوع الخطأ وحكم التصعيد.</li>
+      <li>نسبة الصحة لكل لغة على حدة، وعدد التصعيدات الفائتة والزائدة.</li>
+      <li>قرار قبول مكتوب بشروطه في أسفل الورقة: يُشغَّل المساعد للجمهور أم لا، وبأي شروط.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/start/test_sheet_part1_scored.csv" target="_blank"><b>start/test_sheet_part1_scored.csv</b><span>نقطة البداية: ورقة الاختبار وفيها تقييم الاستفسارات العشرين الأولى. لا تحتاج إلى نتيجة المختبر 1.2.</span></a>
+    <a href="files/rules/madad_rules_v3.txt" target="_blank"><b>rules/madad_rules_v3.txt</b><span>القواعد النافذة، والإصدار الملغى بجانبها.</span></a>
+    <a href="files/assistant/acceptance_criteria.txt" target="_blank"><b>assistant/acceptance_criteria.txt</b><span>معايير القبول الأربعة.</span></a>
+  </div>
+  <p class="small">برنامج جداول. وللتمرين الإضافي مساعد يعمل على مستندات مقدَّمة.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · افتح الورقة <span class="min">5 دقائق</span></h3>
+    <p>افتح ملف البداية واقرأ أحكام العشرين الأولى. عمود «يجب التصعيد؟» فارغ للاستفسارات 21 إلى 40: ستملؤه أنت. القاعدة في البند 14: الحالات الفردية والشكاوى والتظلمات والبلاغات تُحال إلى موظف.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · الصحة والتصعيد للاستفسارات 21 إلى 40 <span class="min">15 دقيقة</span></h3>
+    <p>لكل استفسار: هل يجب تصعيده؟ ثم الصحة ونوع الخطأ، ثم حكم التصعيد. استفسارات اللهجة تُقرأ بمعناها: أعد صياغة الاستفسار بالفصحى أولًا، ثم اسأل: هل أجابت الإجابة عن هذا السؤال، أم عن كلمة منه؟</p>
+    <div class="callout note"><b>إجابة صحيحة الكلام ناقصة الفعل:</b> في ما يجب تصعيده، الإجابة «صحيحة» فقط إن لم تبت وأحالت إلى موظف. اقرأ Q30 بهذه العين.</div>
+  </div>
+
+  <div class="step">
+    <h3>3 · النسب بحسب اللغة <span class="min">10 دقائق</span></h3>
+    <p>احسب لكل لغة: عدد الاستفسارات، والصحيحة، والنسبة. ثم احسب: كم استفسارًا يجب تصعيده، وكم صُعّد، وما الفائت وما الزائد. في برنامج الجداول تكفي <code>COUNTIFS</code> على عمودي «اللغة» و«الصحة».</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · قرار القبول <span class="min">10 دقائق</span></h3>
+    <p>في أسفل الورقة اكتب قرار القبول في ثلاثة أسطر، موجّهًا إلى رئيس الخدمات الرقمية مالك «بشير»: هل يُشغَّل للجمهور؟ ما المعيار الذي لم يتحقق، بالأرقام؟ وما الشروط قبل إعادة الاختبار؟</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ تمرين إضافي</h3>
+    <p>أعد صياغة ثلاثة استفسارات فصيحة بلهجتك واطرحها على المساعد الحي المحمّل بالقواعد، وسجّل هل تغيّرت الإجابة.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>ما نسبة الصحة في الفصحى، وفي اللهجة، وفي الإنجليزية؟ وما الذي يخفيه المتوسط الواحد؟</li>
+    <li>كم استفسارًا كان يجب تصعيده، وكم منها فات «بشير»؟</li>
+    <li>ما الشرط الذي يجب أن يتحقق قبل أي إعادة للاختبار؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <ul>
+      <li>الحل في <code>labs/solutions/D1_3_assistant_test_part2.md</code>، والورقة المكتملة <code>labs/solutions/test_sheet_scored.csv</code>. يتحقق منها <code>uv run labs/solutions/check.py 1.3</code>.</li>
+      <li>الصحيحة 25 من 40 (62.5%): الفصحى 12 من 16 (75%)، والإنجليزية 7 من 12 (58%)، واللهجة 6 من 12 (50%). لم يبلغ 90% في أي لغة.</li>
+      <li>يجب تصعيده 8، وصُعّد 4. الفائت: Q07 وQ24 وQ30 وQ39. الزائد: Q20 وQ32. أربع إجابات من القاعدة الملغاة: Q03 وQ13 وQ28 وQ38.</li>
+      <li>القرار المرجعي: لا يُشغَّل. الشروط: حذف الإصدار 2 من مصادره؛ وقاعدة تصعيد لكل حالة فردية وشكوى وتظلم وبلاغ؛ ومجموعة اختبار باللهجة أكبر؛ ثم إعادة الاختبار كاملًا.</li>
+      <li>Q39 أخطر إجابة في الورقة: «I checked your file». «بشير» لا يطّلع على الملفات (البند 14)، فادعاء الاطلاع اختلاق، وهو بت في حالة فردية أيضًا.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_2_assistant_test_part1.html" rel="prev">→ المختبر السابق</a><a href="D1_4_extraction_errors.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الخدمات الحكومية<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع c948079</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:06:27Z","version":"2027.1.0","commit":"c948079"},"course":{"id":"use-sec-203","code":"USE-SEC-203","title":"الذكاء الاصطناعي في الخدمات الحكومية","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-203/","repo":"SDAIAAcademy/use-sec-203","home":"../index.html"},"lab":{"id":"1.3","title":"اختبار «بشير»: اللهجة والتصعيد وورقة الاختبار","summary":"الجزء الثاني من اختبار مساعد مستند إلى المصادر على 40 استفسارًا ثنائي اللغة: تبدأ من ورقة فيها تقييم العشرين الأولى، وتقيّم الاستفسارات 21 إلى 40 في الصحة وقرار التصعيد، ثم تحسب النسب بحسب اللغة وتكتب قرار القبول. تخرج بورقة الاختبار كاملة.","minutes":40,"day":1,"unit":"اليوم 1","session":3,"deck":"../slides/day1.html#lab-1-3","prev":"D1_2_assistant_test_part1.html","next":"D1_4_extraction_errors.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
