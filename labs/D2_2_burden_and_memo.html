@@ -25,11 +25,11 @@
 
   <div class="step">
     <h3>2 · العدّ بحسب نوع الدخل <span class="min">10 دقائق</span></h3>
-    <p>لكل فئة (ثابت، موسمي): عدد الطلبات، والمخالفات المؤكدة، والسليم، والأسر السليمة المؤشَّر عليها.</p>
-    <pre class="code" data-file="COUNTIFS"><code>=COUNTIFS(B:B,"موسمي")
-=COUNTIFS(B:B,"موسمي",G:G,"مخالفة مؤكدة")
-=COUNTIFS(B:B,"موسمي",G:G,"سليم")
-=COUNTIFS(B:B,"موسمي",G:G,"سليم",F:F,"&gt;=70")</code></pre>
+    <p>لكل فئة (ثابت، موسمي): عدد الطلبات، والمخالفات المؤكدة، والسليم، والأسر السليمة المؤشَّر عليها. اكتب في J1 «مخالفة مؤكدة»، وفي J2 «سليم»، وفي J3 عتبتك، وفي K1 اسم الفئة كما في عمود نوع الدخل («موسمي» ثم «ثابت»).</p>
+    <pre class="code" data-file="COUNTIFS"><code>=COUNTIFS(B:B,K1)
+=COUNTIFS(B:B,K1,G:G,J1)
+=COUNTIFS(B:B,K1,G:G,J2)
+=COUNTIFS(B:B,K1,G:G,J2,F:F,"&gt;="&amp;J3)</code></pre>
   </div>
 
   <div class="step">
