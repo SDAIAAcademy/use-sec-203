@@ -321,7 +321,13 @@ def lab_2_4() -> None:
         t = p.read_text(encoding="utf-8")
         f = facts[p.stem]
         assert people(t) == int(f["من يتأثر في السنة"]), p.stem
-        met = "ضمن الهدف" in t or "ضمن هدف" in t
+        digital = "رقمية ومتاحة للهيئة؟ نعم" in t
+        assert (f["رقمية؟"] == YES) == digital, p.stem
+        # The classification allows the hosting when the data are public or not personal, or when
+        # restricted personal data stay on the agency's own servers or its approved mail service.
+        hosting = any(s in t for s in ("بيانات عامة", "بلا بيانات شخصية", "داخل الهيئة", "خدمة البريد المعتمدة"))
+        assert (f["التصنيف يسمح؟"] == YES) == hosting, p.stem
+        met ="ضمن الهدف" in t or "ضمن هدف" in t
         assert (f["بلغت الهدف؟"] == YES) == met, p.stem
         shared = "لا حاجة إلى اتفاقية" in t
         assert (f["المشاركة مستوفاة؟"] == YES) == shared, p.stem
