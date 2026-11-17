@@ -114,6 +114,41 @@ AI in Government Services
 
 ### المرجعيات الوطنية
 
+- [سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [سدايا: مبادئ أخلاقيات الذكاء الاصطناعي](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [نظام حماية البيانات الشخصية](https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf)
+- [مكتب إدارة البيانات الوطنية: سياسة وضوابط تصنيف البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
+- [مكتب إدارة البيانات الوطنية: سياسة وضوابط مشاركة البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataSharingPolicyAR.pdf)
+
+### سجلات الشفافية والقرار الآلي في القطاع العام
+
+- [UK Government: Algorithmic Transparency Recording Standard Hub](https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub)
+- [UK Government: Algorithmic Transparency Recording Standard, guidance for public sector bodies](https://www.gov.uk/government/publications/guidance-for-organisations-using-the-algorithmic-transparency-recording-standard/algorithmic-transparency-recording-standard-guidance-for-public-sector-bodies)
+- [Government of the Netherlands: Het Algoritmeregister (the algorithm register)](https://algoritmes.overheid.nl/nl)
+- [Treasury Board of Canada Secretariat: Directive on Automated Decision-Making](https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592)
+
+### إخفاقات موثقة
+
+- [Autoriteit Persoonsgegevens: Tax Administration fined for discriminatory and unlawful data processing (2021)](https://www.autoriteitpersoonsgegevens.nl/en/current/tax-administration-fined-for-discriminatory-and-unlawful-data-processing)
+- [Amnesty International: Xenophobic machines: Discrimination through unregulated use of algorithms in the Dutch childcare benefits scandal (2021)](https://www.amnesty.org/en/documents/eur35/4686/2021/en/)
+- [The Markup: NYC’s AI Chatbot Tells Businesses to Break the Law (2024)](https://themarkup.org/artificial-intelligence/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law)
+
+### المشتريات
+
+- [European Commission, Public Buyers Community: Updated EU AI model contractual clauses](https://public-buyers-community.ec.europa.eu/communities/procurement-ai/resources/updated-eu-ai-model-contractual-clauses)
+- [UK Government: Guidelines for AI procurement](https://www.gov.uk/government/publications/guidelines-for-ai-procurement/guidelines-for-ai-procurement)
+
+### الأدوات
+
+- [Open WebUI: documentation](https://docs.openwebui.com/)
+- [Tesseract OCR: documentation](https://tesseract-ocr.github.io/tessdoc/)
+- [Docling: documentation](https://docling-project.github.io/docling/)
+- [Orange Data Mining](https://orangedatamining.com/)
+- [KNIME Analytics Platform](https://www.knime.com/knime-analytics-platform)
+<!-- /academy:sources -->
+
+## المرجعيات الوطنية: العناوين الرسمية
+
 - مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية الصادرة عن سدايا: https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf
 - مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا: https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf
 - نظام حماية البيانات الشخصية: https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf
