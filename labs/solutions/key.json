@@ -1,0 +1,495 @@
+{
+ "seed": 203,
+ "assistant": {
+  "total": 40,
+  "correct": 25,
+  "by_lang": {
+   "فصحى": {
+    "n": 16,
+    "correct": 12
+   },
+   "English": {
+    "n": 12,
+    "correct": 7
+   },
+   "لهجة": {
+    "n": 12,
+    "correct": 6
+   }
+  },
+  "errors": {
+   "قاعدة ملغاة": 4,
+   "نقص": 2,
+   "بتّ في حالة فردية": 2,
+   "اختلاق": 3,
+   "واقعة خاطئة": 1,
+   "تصعيد زائد": 2,
+   "سوء فهم": 1
+  },
+  "must": 8,
+  "escalated": 4,
+  "missed": [
+   "Q07",
+   "Q24",
+   "Q30",
+   "Q39"
+  ],
+  "over": [
+   "Q20",
+   "Q32"
+  ],
+  "part1_correct": 13,
+  "part2_correct": 12
+ },
+ "extraction": {
+  "cells": 240,
+  "diffs": 22,
+  "formatting": 9,
+  "consequential": 13,
+  "forms_affected": 13,
+  "handwritten": 12,
+  "handwritten_affected": 10,
+  "typed_affected": 3,
+  "flips": [
+   [
+    "F03",
+    "قُبل خطأً"
+   ],
+   [
+    "F05",
+    "رُفض خطأً"
+   ],
+   [
+    "F08",
+    "رُفض خطأً"
+   ],
+   [
+    "F19",
+    "قُبل خطأً"
+   ]
+  ],
+  "amounts": [
+   [
+    "F11",
+    900,
+    2150
+   ],
+   [
+    "F22",
+    1650,
+    1400
+   ]
+  ],
+  "field_accuracy_all": 90.8,
+  "field_accuracy_consequential": 94.6
+ },
+ "fraud": {
+  "capacity": 350,
+  "thresholds": {
+   "50": {
+    "applications": 10000,
+    "fraud": 300,
+    "clean": 9700,
+    "flagged": 2156,
+    "caught": 292,
+    "missed": 8,
+    "wrongly_flagged": 1864,
+    "wrong_rate_pct": 19.22,
+    "held_riyals": 2202850,
+    "by_income": {
+     "ثابت": {
+      "applications": 7500,
+      "fraud": 225,
+      "clean": 7275,
+      "flagged": 1214,
+      "caught": 219,
+      "missed": 6,
+      "wrongly_flagged": 995,
+      "wrong_rate_pct": 13.68,
+      "held_riyals": 1172750
+     },
+     "موسمي": {
+      "applications": 2500,
+      "fraud": 75,
+      "clean": 2425,
+      "flagged": 942,
+      "caught": 73,
+      "missed": 2,
+      "wrongly_flagged": 869,
+      "wrong_rate_pct": 35.84,
+      "held_riyals": 1030100
+     }
+    },
+    "by_area": {
+     "مدينة": {
+      "applications": 6973,
+      "fraud": 202,
+      "clean": 6771,
+      "flagged": 1499,
+      "caught": 197,
+      "missed": 5,
+      "wrongly_flagged": 1302,
+      "wrong_rate_pct": 19.23,
+      "held_riyals": 1543550
+     },
+     "قرية نائية": {
+      "applications": 3027,
+      "fraud": 98,
+      "clean": 2929,
+      "flagged": 657,
+      "caught": 95,
+      "missed": 3,
+      "wrongly_flagged": 562,
+      "wrong_rate_pct": 19.19,
+      "held_riyals": 659300
+     }
+    },
+    "accuracy_pct": 81.3
+   },
+   "60": {
+    "applications": 10000,
+    "fraud": 300,
+    "clean": 9700,
+    "flagged": 864,
+    "caught": 269,
+    "missed": 31,
+    "wrongly_flagged": 595,
+    "wrong_rate_pct": 6.13,
+    "held_riyals": 715000,
+    "by_income": {
+     "ثابت": {
+      "applications": 7500,
+      "fraud": 225,
+      "clean": 7275,
+      "flagged": 472,
+      "caught": 206,
+      "missed": 19,
+      "wrongly_flagged": 266,
+      "wrong_rate_pct": 3.66,
+      "held_riyals": 304900
+     },
+     "موسمي": {
+      "applications": 2500,
+      "fraud": 75,
+      "clean": 2425,
+      "flagged": 392,
+      "caught": 63,
+      "missed": 12,
+      "wrongly_flagged": 329,
+      "wrong_rate_pct": 13.57,
+      "held_riyals": 410100
+     }
+    },
+    "by_area": {
+     "مدينة": {
+      "applications": 6973,
+      "fraud": 202,
+      "clean": 6771,
+      "flagged": 571,
+      "caught": 181,
+      "missed": 21,
+      "wrongly_flagged": 390,
+      "wrong_rate_pct": 5.76,
+      "held_riyals": 470750
+     },
+     "قرية نائية": {
+      "applications": 3027,
+      "fraud": 98,
+      "clean": 2929,
+      "flagged": 293,
+      "caught": 88,
+      "missed": 10,
+      "wrongly_flagged": 205,
+      "wrong_rate_pct": 7.0,
+      "held_riyals": 244250
+     }
+    },
+    "accuracy_pct": 93.7
+   },
+   "70": {
+    "applications": 10000,
+    "fraud": 300,
+    "clean": 9700,
+    "flagged": 331,
+    "caught": 201,
+    "missed": 99,
+    "wrongly_flagged": 130,
+    "wrong_rate_pct": 1.34,
+    "held_riyals": 163000,
+    "by_income": {
+     "ثابت": {
+      "applications": 7500,
+      "fraud": 225,
+      "clean": 7275,
+      "flagged": 197,
+      "caught": 156,
+      "missed": 69,
+      "wrongly_flagged": 41,
+      "wrong_rate_pct": 0.56,
+      "held_riyals": 46650
+     },
+     "موسمي": {
+      "applications": 2500,
+      "fraud": 75,
+      "clean": 2425,
+      "flagged": 134,
+      "caught": 45,
+      "missed": 30,
+      "wrongly_flagged": 89,
+      "wrong_rate_pct": 3.67,
+      "held_riyals": 116350
+     }
+    },
+    "by_area": {
+     "مدينة": {
+      "applications": 6973,
+      "fraud": 202,
+      "clean": 6771,
+      "flagged": 219,
+      "caught": 133,
+      "missed": 69,
+      "wrongly_flagged": 86,
+      "wrong_rate_pct": 1.27,
+      "held_riyals": 112650
+     },
+     "قرية نائية": {
+      "applications": 3027,
+      "fraud": 98,
+      "clean": 2929,
+      "flagged": 112,
+      "caught": 68,
+      "missed": 30,
+      "wrongly_flagged": 44,
+      "wrong_rate_pct": 1.5,
+      "held_riyals": 50350
+     }
+    },
+    "accuracy_pct": 97.7
+   },
+   "80": {
+    "applications": 10000,
+    "fraud": 300,
+    "clean": 9700,
+    "flagged": 122,
+    "caught": 100,
+    "missed": 200,
+    "wrongly_flagged": 22,
+    "wrong_rate_pct": 0.23,
+    "held_riyals": 26550,
+    "by_income": {
+     "ثابت": {
+      "applications": 7500,
+      "fraud": 225,
+      "clean": 7275,
+      "flagged": 86,
+      "caught": 79,
+      "missed": 146,
+      "wrongly_flagged": 7,
+      "wrong_rate_pct": 0.1,
+      "held_riyals": 8300
+     },
+     "موسمي": {
+      "applications": 2500,
+      "fraud": 75,
+      "clean": 2425,
+      "flagged": 36,
+      "caught": 21,
+      "missed": 54,
+      "wrongly_flagged": 15,
+      "wrong_rate_pct": 0.62,
+      "held_riyals": 18250
+     }
+    },
+    "by_area": {
+     "مدينة": {
+      "applications": 6973,
+      "fraud": 202,
+      "clean": 6771,
+      "flagged": 83,
+      "caught": 69,
+      "missed": 133,
+      "wrongly_flagged": 14,
+      "wrong_rate_pct": 0.21,
+      "held_riyals": 18600
+     },
+     "قرية نائية": {
+      "applications": 3027,
+      "fraud": 98,
+      "clean": 2929,
+      "flagged": 39,
+      "caught": 31,
+      "missed": 67,
+      "wrongly_flagged": 8,
+      "wrong_rate_pct": 0.27,
+      "held_riyals": 7950
+     }
+    },
+    "accuracy_pct": 97.8
+   },
+   "90": {
+    "applications": 10000,
+    "fraud": 300,
+    "clean": 9700,
+    "flagged": 31,
+    "caught": 29,
+    "missed": 271,
+    "wrongly_flagged": 2,
+    "wrong_rate_pct": 0.02,
+    "held_riyals": 1800,
+    "by_income": {
+     "ثابت": {
+      "applications": 7500,
+      "fraud": 225,
+      "clean": 7275,
+      "flagged": 22,
+      "caught": 22,
+      "missed": 203,
+      "wrongly_flagged": 0,
+      "wrong_rate_pct": 0.0,
+      "held_riyals": 0
+     },
+     "موسمي": {
+      "applications": 2500,
+      "fraud": 75,
+      "clean": 2425,
+      "flagged": 9,
+      "caught": 7,
+      "missed": 68,
+      "wrongly_flagged": 2,
+      "wrong_rate_pct": 0.08,
+      "held_riyals": 1800
+     }
+    },
+    "by_area": {
+     "مدينة": {
+      "applications": 6973,
+      "fraud": 202,
+      "clean": 6771,
+      "flagged": 23,
+      "caught": 22,
+      "missed": 180,
+      "wrongly_flagged": 1,
+      "wrong_rate_pct": 0.01,
+      "held_riyals": 1400
+     },
+     "قرية نائية": {
+      "applications": 3027,
+      "fraud": 98,
+      "clean": 2929,
+      "flagged": 8,
+      "caught": 7,
+      "missed": 91,
+      "wrongly_flagged": 1,
+      "wrong_rate_pct": 0.03,
+      "held_riyals": 400
+     }
+    },
+    "accuracy_pct": 97.3
+   }
+  }
+ },
+ "tiering": {
+  "U01": "محدودة",
+  "U02": "عالية",
+  "U03": "عالية",
+  "U04": "عالية",
+  "U05": "محدودة",
+  "U06": "بسيطة أو منعدمة",
+  "U07": "بسيطة أو منعدمة",
+  "U08": "عالية",
+  "U09": "محدودة",
+  "U10": "غير مقبولة"
+ },
+ "map": {
+  "scores": {
+   "U01": [
+    5,
+    4,
+    9,
+    "لا قرار سلبي"
+   ],
+   "U02": [
+    4,
+    4,
+    8,
+    "تجتاز"
+   ],
+   "U03": [
+    5,
+    3,
+    8,
+    "لا تُقبل"
+   ],
+   "U04": [
+    2,
+    3,
+    5,
+    "لا تُقبل"
+   ],
+   "U05": [
+    2,
+    4,
+    6,
+    "لا قرار سلبي"
+   ],
+   "U06": [
+    1,
+    5,
+    6,
+    "لا قرار سلبي"
+   ],
+   "U07": [
+    3,
+    5,
+    8,
+    "لا قرار سلبي"
+   ],
+   "U08": [
+    5,
+    3,
+    8,
+    "تجتاز"
+   ],
+   "U09": [
+    3,
+    4,
+    7,
+    "لا قرار سلبي"
+   ],
+   "U10": [
+    "",
+    "",
+    "",
+    "مستبعدة"
+   ]
+  },
+  "rank": {
+   "U01": 1,
+   "U07": 2,
+   "U02": 3,
+   "U08": 4,
+   "U09": 5,
+   "U06": 6,
+   "U05": 7
+  },
+  "pilot": "U01",
+  "lab_2_4": [
+   "U01",
+   "U03",
+   "U04",
+   "U07"
+  ]
+ },
+ "record": {
+  "defects": [
+   2,
+   4,
+   7,
+   8,
+   10,
+   12
+  ],
+  "fields": 12,
+  "appeal_steps": 8
+ }
+}
